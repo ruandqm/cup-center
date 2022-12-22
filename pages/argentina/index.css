@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*General Styles*/
+.dFlex {
+    display: flex;
+}
+
+.jCenter {
+    justify-content: center;
+}
+
+.aCenter {
+    align-items: center;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.navPages {
+    justify-content: space-between;
+    padding: 2em;
+    align-items: center;
+}
+
+.actTeam {
+    gap: 1em;
+}
+
+.primaryButton {
+    background-color: #042940;
+    color: #fff;
+    border: none;
+    padding: 0 2em;
+    border-radius: 0.8em;
+    height: 2.5rem;
+    align-items: center;
+}
+
+.secondaryButton {
+    background-color: #042940;
+    color: #fff;
+    font-size: 0.8em;
+    border: none;
+    padding: 0.2em 2em;
+    border-radius: 0.8em;
+    align-items: center;
+}
+
+.teamDetails {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #042940;
+    color: #FFF;
+    padding: 1rem;
+    text-align: center;
+}
