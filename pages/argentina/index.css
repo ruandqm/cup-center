@@ -124,6 +124,23 @@ body {
     display: none;
 }
 
+.loading {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #042940;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 footer {
     flex-shrink: 0;
     background-color: #042940;
