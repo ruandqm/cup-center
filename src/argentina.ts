@@ -2,8 +2,11 @@ const seeMore: HTMLElement = document.getElementById('seeMore')!
 const scoreboard: HTMLElement = document.getElementById('scoreBoard')!
 const gamesSection: HTMLElement = document.getElementById('games')!
 const resultsSection: HTMLElement = document.getElementById('results')!;
-const firstGame: HTMLElement = document.getElementById('firstGame')!
-const firstResult: HTMLElement = document.getElementById('firstResult')!
+/* const firstGame: HTMLElement = document.getElementById('firstGame')!
+const firstResult: HTMLElement = document.getElementById('firstResult')! */
+const loader: HTMLElement = document.getElementById('loader')!
+loader.style.display = 'block'
+
 let qtdControl = 0 //stores the number of times the RenderClassificatory function was executed
 const api: string = 'https://apigenerator.dronahq.com/api/zs9PYAhn/jogos'
 
@@ -36,6 +39,7 @@ function GetData() {
                 }
             }
             RenderData(games)
+            loader.style.display = 'none'
         })
 }
 function GetScores(game: Game) {
