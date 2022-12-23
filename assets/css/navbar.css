@@ -1,7 +1,5 @@
 /* Header and NavBar*/
 header {
-    height: 10vh;
-    width: 100vw;
     padding: 0.5em 1.5em 0.5em 1.5em;
     background-color: #042940;
     display: flex;
@@ -71,7 +69,7 @@ header {
     }
 
     #menu:checked~.toggleBack {
-        margin-top: 8vh;
+        margin-top: 7vh;
         height: 12em;
         width: 100vw;
         transition-duration: 0.4s;
