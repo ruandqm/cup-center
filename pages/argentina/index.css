@@ -84,3 +84,21 @@ footer {
     padding: 1rem;
     text-align: center;
 }
+
+@media screen and (max-width: 620px) {
+    .navPages {
+        display: grid;
+        grid-template: "actTeam actTeam" 2fr
+            "prev next" 1fr / 1fr 1fr;
+        gap: 1em;
+    }
+
+    .actTeam>img {
+        width: 30vw;
+    }
+}
+@media screen and (max-width: 300px) {
+    body{
+        font-size: 12px;
+    }
+}
