@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="./players.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <section class="content">
+        <header>
+            <a href="../index.html"> <img class="logoClean" src="../../assets/img/logoClean.png" width="70"
+                    alt="Logo Flit"></a>
+            <nav class="navbarMain">
+                <input type="checkbox" id="menu">
+                <label for="menu" class="menu"><span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </label>
+                <div class="toggleBack"></div>
+                <ul class="navItems">
+                    <li class="navOption"><a href="./index.html">Home</a></li>
+                    <li class="navOption"> <a href="./index.html">Jogos</a></li>
+                    <li class="navOption"><a href="../register/index.html">Cadastrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <nav class="navPages dFlex jCenter">
+            <div class="actTeam dFlex jCenter aCenter" style="grid-area: actTeam;">
+                <img src="../../assets/img/argentina.png" width="100" alt="bandeira da Argentina">
+                <div class="teamDetails dFlex jCenter">
+                    <h2>Argentina</h2>
+                </div>
+            </div>
+        </nav>
+        <section class="filtersSection">
+            <h3>Filtrar por idade</h3>
+            <div class="filters dFlex jCenter">
+                <div class="filter"><label for="minAge">Idade Mínima</label><br>
+                    <input type="text" id="minAge">
+                </div>
+                <div class="filter">
+                    <label for="minAge">Idade Máxima</label><br>
+                    <input type="text" id="maxAge">
+                </div>
+
+            </div>
+
+        </section>
+        <section class="playersCollection">
+            <h1>Goleiros</h1>
+            <div class="playersContainer dFlex aCenter">
+                <span class="material-symbols-outlined prev" id="prev1">
+                    arrow_back_ios_new
+                </span>
+                <section class="players">
+                    <!--             <input type="checkbox" id="next"> -->
+                    <div class="cards" id="cardsGK">
+
+                    </div>
+                </section>
+                <span class="material-symbols-outlined next" id="next1">
+                    arrow_forward_ios
+                </span>
+            </div>
+        </section>
+
+    </section>
+
+    <section class="playersCollection">
+        <h1>Defensores</h1>
+        <div class="playersContainer dFlex aCenter">
+            <span class="material-symbols-outlined prev" id="prev2">
+                arrow_back_ios_new
+            </span>
+            <section class="players">
+                <!--             <input type="checkbox" id="next"> -->
+                <div class="cards" id="cardsDF">
+
+                </div>
+
+            </section>
+            <span class="material-symbols-outlined next" id="next2">
+                arrow_forward_ios
+            </span>
+        </div>
+    </section>
+    <section class="playersCollection">
+        <h1>Meias</h1>
+        <div class="playersContainer dFlex aCenter">
+            <span class="material-symbols-outlined prev" id="prev3">
+                arrow_back_ios_new
+            </span>
+            <section class="players">
+                <!--             <input type="checkbox" id="next"> -->
+                <div class="cards" id="cardsMF">
+
+                </div>
+
+            </section>
+            <span class="material-symbols-outlined next" id="next3">
+                arrow_forward_ios
+            </span>
+        </div>
+    </section>
+    <section class="playersCollection">
+        <h1>Atacantes</h1>
+        <div class="playersContainer dFlex aCenter">
+            <span class="material-symbols-outlined prev" id="prev4">
+                arrow_back_ios_new
+            </span>
+            <section class="players">
+                <!--             <input type="checkbox" id="next"> -->
+                <div class="cards" id="cardsFW">
+
+                </div>
+
+            </section>
+            <span class="material-symbols-outlined next" id="next4">
+                arrow_forward_ios
+            </span>
+        </div>
+    </section>
+
+    </section>
+
+    <footer>
+        &copy Todos os direitos reservados a Gabriel Santana e Ruan de Queiroz
+    </footer>
+    <script src="../../dist/playersArgentina.js"></script>
+</body>
+
+</html>
