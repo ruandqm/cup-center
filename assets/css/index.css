@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #eeeeee;
+    font-size: 16px;
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.teams>a {
+    color: #000;
+    text-decoration: none;
+}
+
+.team {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    width: 20rem;
+    padding: 1em;
+    background-color: #dddddb;
+    transition-duration: 0.4s;
+}
+
+.team:hover {
+    top: -4px;
+    box-shadow: 0 4px 4px #999;
+    transition: all .2s ease-in-out
+}
+
+.team>span {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #042940;
+    color: #FFF;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 5vw
+    }
+
+    .team {
+        width: 90vw;
+    }
+
+    .team>img {
+        width: 40vw;
+    }
+}
