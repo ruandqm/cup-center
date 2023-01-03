@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #042940;
+}
+
+header img {
+    object-fit: contain;
+}
+
+ul {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+    gap: 2rem;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    color: #FFF;
+}
+
+li:hover {
+    transition: .3s;
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+}
+
+body {
+    background: #eeeeee;
+}
+
+.navegationGames {
+    height: 20vh;
+    margin: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegationGames a {
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #042940;
+    text-decoration: none;
+}
+
+.selectionInformation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectionInformation img {
+    margin-right: 1rem;
+    width: 220px;
+    height: 220px;
+}
+
+.selectionInformation div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.qualifyingGames,
+.finalGames {
+    width: 65vw;
+    height: 20vh;
+    margin: 1rem auto;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.qualifyingGames {
+    padding: 0 1rem;
+}
+
+.game,
+.gameNone {
+    width: 10vw;
+    height: 10vh;
+    padding-top: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    background: #d9d9d9;
+}
+
+.game{
+    margin-top: 3rem;
+}
+
+.gameNone {
+    display: none;
+    margin-top: 5rem;
+    margin-left: 32rem;
+}
+
+.moreAboutTheGames {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.moreAboutTheGames>h1 {
+    margin: 1rem 0;
+}
+
+.moreAboutTheGames>button {
+    width: 10vw;
+    height: 5vh;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    background: #042940;
+    cursor: pointer;
+}
+
+.finalGames {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Finalgame {
+    width: 10vw;
+    height: 10vh;
+    padding-top: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    background: #d9d9d9;
+}
+
+.NavigationLink{
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #042940;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .navegationGames {
+        flex-direction: column;
+        margin-bottom: 8rem;
+    }
+}
+
+.openSeeMore{
+    height: 10rem;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition: 0.5s all;
+}
+
+.ContainerViewGames{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.None{
+    display: none;
+}
+
+.MainContent{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+    nav{
+        display: none;
+    }
+
+    .None{
+        display: flex;
+    }
+
+    .selectionInformation{
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .navegationGames{
+        flex-direction: column;
+    }
+
+    .gameNone{
+        margin-left: 11.5rem;
+    }
+
+    p{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .MainContent{
+        margin-bottom: 8rem;
+    }
+}
