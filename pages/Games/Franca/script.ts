@@ -9,6 +9,17 @@ const qualifyingGames = document.querySelector<HTMLElement>(".qualifyingGames")
 
 const gameNone = document.querySelector<HTMLElement>(".gameNone")
 
+const menuButtonGames = document.querySelector('.MenuColapsado')
+const navBarGames = document.querySelector('nav')
+
+menuButtonGames?.addEventListener('click', () => {
+    if(navBarGames!.style!.display! === 'flex'){
+        navBarGames!.style!.display! = 'none'
+    }else{
+        navBarGames!.style!.display! = 'flex'
+    }
+})
+
 interface TeamData {
   timeA: string
   timeB: string

@@ -5,10 +5,10 @@
 }
 
 header{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 39rem;
+    justify-content: space-between;
     padding: 2rem;
     background-color: #042940;
 }
@@ -47,8 +47,15 @@ main{
     flex-direction: column;
 }
 
-h2{
+.AtacantesText{
     margin-left: 20rem;
+    margin-top: 5rem;
+    margin-bottom: -2rem;
+}
+
+h2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 h3{
@@ -84,12 +91,12 @@ input{
     margin-left: 10rem;
 }
 
-.Players{
+.Players, .PlayersMeioCampo, .PlayersGoleiro{
     display: flex;
     margin-top: 8rem;
 }
 
-.ContainerPlayer{
+.ContainerPlayer, .ContainerPlayerMeioCampo, .ContainerPlayerGoleiro{
     display: flex;
     margin-right: 2rem;
     align-items: center;
@@ -101,7 +108,14 @@ input{
     border-radius: 1rem;
 }
 
-.RightArrow{
+.RightArrow, .RightArrowMeioCampo, .RightArrowGoleiro{
+    background-color: transparent;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.LeftArrow, .LeftArrowMeioCampo, .LeftArrowGoleiro{
     background-color: transparent;
     border: none;
     margin-top: 2rem;
@@ -110,4 +124,54 @@ input{
 
 .None{
     display: none;
+}
+
+.ContainerButtons{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    nav{
+        display: none;
+    }
+
+    .None{
+        display: flex;
+    }
+
+    .ContainerInputsText{
+        flex-direction: column;
+    }
+
+    .ContainerFilter{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .ContainerTeam{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Flag{
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .MinimumAge{
+        margin-bottom: 2rem;
+    }
+
+    .ContainerPlayer, .ContainerPlayerMeioCampo, .ContainerPlayerGoleiro{
+        max-width: 6rem;
+    }
+
+    .ContainerPlayer > img, .ContainerPlayerMeioCampo > img, .ContainerPlayerGoleiro > img{
+        max-width: 5rem;
+    }
 }

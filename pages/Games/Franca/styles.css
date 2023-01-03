@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-header {
+header{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 39rem;
+    justify-content: space-between;
     padding: 2rem;
     background-color: #042940;
 }
@@ -153,6 +153,18 @@ body {
     background: #d9d9d9;
 }
 
+.NavigationLink{
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #042940;
+    text-decoration: none;
+}
+
 @media (max-width: 800px) {
     .navegationGames {
         flex-direction: column;
@@ -172,4 +184,48 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.None{
+    display: none;
+}
+
+.MainContent{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+    nav{
+        display: none;
+    }
+
+    .None{
+        display: flex;
+    }
+
+    .selectionInformation{
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .navegationGames{
+        flex-direction: column;
+    }
+
+    .gameNone{
+        margin-left: 11.5rem;
+    }
+
+    p{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .MainContent{
+        margin-bottom: 8rem;
+    }
 }
