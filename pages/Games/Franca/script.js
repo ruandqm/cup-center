@@ -6,6 +6,16 @@ const golB = document.querySelectorAll(".golB");
 const buttonMoreAbout = document.querySelector("#moreAbout");
 const qualifyingGames = document.querySelector(".qualifyingGames");
 const gameNone = document.querySelector(".gameNone");
+const menuButtonGames = document.querySelector('.MenuColapsado');
+const navBarGames = document.querySelector('nav');
+menuButtonGames === null || menuButtonGames === void 0 ? void 0 : menuButtonGames.addEventListener('click', () => {
+    if (navBarGames.style.display === 'flex') {
+        navBarGames.style.display = 'none';
+    }
+    else {
+        navBarGames.style.display = 'flex';
+    }
+});
 fetch("https://apigenerator.dronahq.com/api/zs9PYAhn/jogos")
     .then((data) => {
     if (!data.ok) {
