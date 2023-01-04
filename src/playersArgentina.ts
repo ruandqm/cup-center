@@ -110,9 +110,7 @@ async function MinAge(filter: number) {
             minAgePlayers.push(players[i])
         }
     }
-    for (var i = cards.length - 1; i >= 0; i--) {
-        cards[i].remove()
-    }
+    console.log(filter)
     return minAgePlayers
 }
 
@@ -125,10 +123,32 @@ async function MaxAge(filter: number) {
             maxAgePlayers.push(players[i])
         }
     }
+    console.log(filter)
+    return maxAgePlayers
+}
+
+async function FilterApply(filter: number, type: string) {
+    let minAgeFilter: number = parseInt(minAge.value)
+    let maxAgeFilter: number = parseInt(maxAge.value)
+    if (Number.isNaN(minAgeFilter)) {
+        minAgeFilter = 0
+    }
+    if (Number.isNaN(maxAgeFilter)) {
+        maxAgeFilter = 200
+    }
+    let players: Array<Player> = await GetPlayersTeam()
+    let FilteredPlayers: Array<Player> = []
+    for (let i = 0; i < players.length; i++) {
+        if (parseInt(players[i].year) < maxAgeFilter && parseInt(players[i].year) > minAgeFilter) {
+            FilteredPlayers.push(players[i])
+        }
+    }
+
     for (var i = cards.length - 1; i >= 0; i--) {
         cards[i].remove()
     }
-    return maxAgePlayers
+    RenderPlayers(FilteredPlayers)
+
 }
 
 let actTranslate: number = 0
@@ -222,8 +242,15 @@ for (let next of nexts) {
 
 
 minAge.addEventListener('blur', () => {
-    MinAge(parseInt(minAge.value)).then((min) => RenderPlayers(min))
+    FilterApply(parseInt(minAge.value), 'min')
 })
 maxAge.addEventListener('blur', () => {
-    MaxAge(parseInt(maxAge.value)).then((max) => RenderPlayers(max))
+    FilterApply(parseInt(minAge.value), 'max')
 })
+
+/* minAge.addEventListener('blur', () => {
+    MinAge(parseInt(minAge.value)).then((min) => FilterApply(min))
+})
+maxAge.addEventListener('blur', () => {
+    MaxAge(parseInt(maxAge.value)).then((max) => FilterApply(max))
+}) */
