@@ -41,6 +41,11 @@ fetch("https://apigenerator.dronahq.com/api/zs9PYAhn/jogos")
   })
 
   .then((data) => {
+    const franceGames = data.filter((item: any) => {
+      return item.timeA === 'França' || item.timeB === 'França'
+    })
+
+    console.log(franceGames)
     const games = data.filter((element: TeamData) => {
       if (element.timeA === "França" || element.timeB === "França") {
         return element
