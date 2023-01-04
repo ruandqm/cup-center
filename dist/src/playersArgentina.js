@@ -82,30 +82,6 @@ function RenderPlayers(players) {
     }
 }
 GetPlayers();
-async function MinAge(filter) {
-    let players = await GetPlayersTeam();
-    /* let minAgePlayers = players.filter(player => parseInt(player.year) > filter) */
-    let minAgePlayers = [];
-    for (let i = 0; i < players.length; i++) {
-        if (parseInt(players[i].year) > filter) {
-            minAgePlayers.push(players[i]);
-        }
-    }
-    console.log(filter);
-    return minAgePlayers;
-}
-async function MaxAge(filter) {
-    let players = await GetPlayersTeam();
-    /* let minAgePlayers = players.filter(player => parseInt(player.year) > filter) */
-    let maxAgePlayers = [];
-    for (let i = 0; i < players.length; i++) {
-        if (parseInt(players[i].year) < filter) {
-            maxAgePlayers.push(players[i]);
-        }
-    }
-    console.log(filter);
-    return maxAgePlayers;
-}
 async function FilterApply(filter, type) {
     let minAgeFilter = parseInt(minAge.value);
     let maxAgeFilter = parseInt(maxAge.value);
@@ -180,7 +156,6 @@ function nextSlide(e) {
             cardsFW.style.transform = 'translateX(' + actTranslate + 'em)';
             break;
     }
-    // cards1.style.transform = 'translateX(' + actTranslate + 'em)'
     if (actTranslate < -60) {
         e.composedPath()[0].style.display = 'none';
     }
@@ -213,10 +188,4 @@ minAge.addEventListener('blur', () => {
 maxAge.addEventListener('blur', () => {
     FilterApply(parseInt(minAge.value), 'max');
 });
-/* minAge.addEventListener('blur', () => {
-    MinAge(parseInt(minAge.value)).then((min) => FilterApply(min))
-})
-maxAge.addEventListener('blur', () => {
-    MaxAge(parseInt(maxAge.value)).then((max) => FilterApply(max))
-}) */ 
 //# sourceMappingURL=playersArgentina.js.map
