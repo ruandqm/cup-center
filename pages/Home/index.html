@@ -1,57 +1,60 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <title>Home</title>
 </head>
 
 <body>
+
     <header>
-        <div>
-            <img height="50" width="90" src="../../assets/img/logoClean.png" alt="Logo Branca Escrito Flit">
-        </div>
-        
-        <nav>
-            <ul>
-                <li>Home</li>
-                <a href="../Games/Franca/index.html">
-                    <li>Jogos</li>
-                </a>
-                <a href="../Register/index.html">
-                    <li>Cadastro</li>
-                </a>
+        <a href="./index.html"> <img class="logoClean" src="../../assets/img/logoClean.png" width="70"
+                alt="Logo Flit"></a>
+        <nav class="navbarMain">
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menu"><span class="material-symbols-outlined">
+                    menu
+                </span>
+            </label>
+            <div class="toggleBack"></div>
+            <ul class="navItems">
+                <li class="navOption"><a href="./index.html">Home</a></li>
+                <li class="navOption"> <a href="../games/argentina/index.html">Jogos</a></li>
+                <li class="navOption"><a href="../register/index.html">Cadastrar</a></li>
             </ul>
         </nav>
-
-        <div class="MenuColapsado None">
-            <img height="50" width="50" src="../../assets/img/menu-4-64.png" alt="">
-        </div>
     </header>
 
-    <main>
-        <a href="../Games/Franca/index.html">
-            <div class="boxCountry">
-            <img src="../../assets/img/BandeiraFranca.png" alt="" />
-            <h3>França</h3>
-        </div>
-        </a>
+    <section class="content">
+        <section class="teams">
+            <a href="../games/argentina/index.html">
+                <article class="team">
+                    <img src="../../assets/img/argentina.png" width="150" alt="bandeira da Argentina">
+                    <span>Argentina</span>
 
-        <a href="../Games/Argentina/index.html">
-            <div class="boxCountry">
-            <img src="../../assets/img/argentina.png" alt="" />
-            <h3>Argentina</h3>
-        </div>
-        </a>
-    </main>
+                </article>
+            </a>
+            <a href="../games/france/index.html">
+                <article class="team">
+                    <img src="../../assets/img/france.png" width="150" alt="Bandeira da França">
+                    <span>França</span>
+                </article>
+            </a>
+        </section>
+
+    </section>
 
     <footer>
-        <h4>© Todos os direitos reservados a Gabriel Santana e Ruan de Queiroz</h4>
+        &copy Todos os direitos reservados a Gabriel Santana e Ruan de Queiroz
     </footer>
-
-    <script src="./menu.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
