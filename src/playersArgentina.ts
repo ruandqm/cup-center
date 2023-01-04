@@ -101,32 +101,6 @@ function RenderPlayers(players: Array<Player>) {
 
 GetPlayers()
 
-async function MinAge(filter: number) {
-    let players: Array<Player> = await GetPlayersTeam()
-    /* let minAgePlayers = players.filter(player => parseInt(player.year) > filter) */
-    let minAgePlayers: Array<Player> = []
-    for (let i = 0; i < players.length; i++) {
-        if (parseInt(players[i].year) > filter) {
-            minAgePlayers.push(players[i])
-        }
-    }
-    console.log(filter)
-    return minAgePlayers
-}
-
-async function MaxAge(filter: number) {
-    let players: Array<Player> = await GetPlayersTeam()
-    /* let minAgePlayers = players.filter(player => parseInt(player.year) > filter) */
-    let maxAgePlayers: Array<Player> = []
-    for (let i = 0; i < players.length; i++) {
-        if (parseInt(players[i].year) < filter) {
-            maxAgePlayers.push(players[i])
-        }
-    }
-    console.log(filter)
-    return maxAgePlayers
-}
-
 async function FilterApply(filter: number, type: string) {
     let minAgeFilter: number = parseInt(minAge.value)
     let maxAgeFilter: number = parseInt(maxAge.value)
@@ -148,7 +122,6 @@ async function FilterApply(filter: number, type: string) {
         cards[i].remove()
     }
     RenderPlayers(FilteredPlayers)
-
 }
 
 let actTranslate: number = 0
@@ -210,7 +183,6 @@ function nextSlide(e: any) {
             cardsFW.style.transform = 'translateX(' + actTranslate + 'em)'
             break
     }
-    // cards1.style.transform = 'translateX(' + actTranslate + 'em)'
     if (actTranslate < -60) {
         e.composedPath()[0].style.display = 'none'
     }
@@ -247,10 +219,3 @@ minAge.addEventListener('blur', () => {
 maxAge.addEventListener('blur', () => {
     FilterApply(parseInt(minAge.value), 'max')
 })
-
-/* minAge.addEventListener('blur', () => {
-    MinAge(parseInt(minAge.value)).then((min) => FilterApply(min))
-})
-maxAge.addEventListener('blur', () => {
-    MaxAge(parseInt(maxAge.value)).then((max) => FilterApply(max))
-}) */
